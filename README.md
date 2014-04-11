@@ -1,0 +1,4 @@
+# SensorTag demo
+
+# License
+MIT
