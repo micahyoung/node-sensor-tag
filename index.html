@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1>SensorTag live data</h1>
+
+<h1>Temperature</h1>
+<input id="temperature" value=0>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect();
+  socket.on('temperature', function(temperature) {
+    document.getElementById('temperature').value = temperature * 9/5 + 32;
+  });
+</script>
+
+</body>
+</html>
